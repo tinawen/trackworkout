@@ -2,11 +2,12 @@ from flask import Flask, render_template, request, Response, url_for, redirect, 
 from db import records, users
 import simplejson
 import formencode
+import os
 from formencode import validators
 from functools import wraps
 
 app = Flask(__name__)
-app.debug = True
+app.debug = os.getenv('PORT') is None
 
 @app.route('/records/<person_name>')
 def search_records(person_name):
@@ -90,4 +91,9 @@ def foo():
     return app.send_static_file('add.html')
 
 if __name__ == '__main__':
-    app.run()
+    port = os.getenv('PORT')
+    if port is not None:
+        app.run(port=int(port))
+    else:
+        app.run()
+
