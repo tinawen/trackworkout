@@ -1,0 +1,15 @@
+$default-font-size: 24px;
+
+body {
+    font-family: "Open Sans", "lucida grande", lucida, sans-serif;
+    font-size: $default-font-size;
+    width: 70%;
+    margin: 20px auto;
+}
+
+.date {
+
+	  date-pick {
+	  		font-size: 6px;
+	  }
+}

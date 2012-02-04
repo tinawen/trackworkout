@@ -1,0 +1,22 @@
+<html>
+  <head>
+    <meta http-equiv="Content-Type" content="text/html">
+    <title>workout</title>
+    <script type="text/javascript" src="/static/jquery.js">
+    </script>
+    <script type="text/javascript" src="/static/mustache.js">
+    </script>
+    <script type="text/javascript" src="/static/app.js">
+    </script>
+  </head>
+  <body>
+	   <h1>Welcome to Tina's workout website</h1>
+	   <% for message in get_flashed_messages() %}
+		  <div class=flash>{{message}}</div>
+	   <% endfor %>
+	   {% block body %}
+	   {% endblock %}
+	   <div id="results">
+	   </div>
+  </body>
+</html>

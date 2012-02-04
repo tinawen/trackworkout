@@ -1,0 +1,7 @@
+*~
+tmp
+*.pyc
+mongo
+.DS_Store
+.sass-cache
+workoutenv
