@@ -93,7 +93,7 @@ def foo():
 if __name__ == '__main__':
     port = os.getenv('PORT')
     if port is not None:
-        app.run(port=int(port))
+        app.run('0.0.0.0', int(port))
     else:
         app.run()
 
